@@ -109,6 +109,110 @@
   }
 }
 
+.footer {
+  padding: 40px 0 60px;
+  &__item-title {
+    font-weight: 700;
+    color: #0049b0;
+    margin-bottom: 20px;
+    pointer-events: none;
+  }
+  &__list,
+  &__social {
+    padding: 0;
+    list-style: none;
+  }
+  &__list-item {
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+  &__list-link {
+    color: #202020;
+    &:hover{
+      font-weight: 700;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  &__item-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg{
+      display: none;
+      width: 22px;
+      height: 20px;
+      fill: #202020;
+    }
+  }
+  &__social {
+    display: flex;
+  }
+  &__social-item {
+    &:not(:last-child){
+      margin-right: 5px;
+    }
+  }
+  &__social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 35px;
+    background-color: #202020;
+    border-radius: 4px;
+    svg{
+      fill: #fff;
+    }
+    &:hover{
+      background-color: #0049b0;
+    }
+  }
+  &__social-link--facebook {
+    svg{
+      height: 16px;
+      width: 9px;
+    }
+  }
+  &__social-link--twitter {
+    svg{
+      width: 16px;
+      height: 13px;
+    }
+  }
+  &__social-link--instagram {
+    svg{
+      width: 18px;
+      height: 18px;
+    }
+  }
+  &__social-link--pinterest {
+    svg{
+      width: 13px;
+      height: 16px;
+    }
+  }
+  &__item-box{
+
+  }
+  &__item {
+  }
+  &__item-title {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 15px 0;
+  }
+  &__list {
+  }
+  &__list-item {
+  }
+  &__list-link {
+  }
+}
+
+
+
 @include min-laptop-l{
   .header{
     .navbar {
@@ -151,13 +255,13 @@
   .navbar-nav{
     padding: 0 16px;
   }
-  .header__container, .container-sm, .container-md, .container-lg {
+  .container, .container-sm, .container-md, .container-lg {
     max-width: 780px;
   }
 }
 
 @include tablet {
-  .header__container, .container-sm, .container-md, .container-lg {
+  .container, .container-sm, .container-md, .container-lg {
     max-width: 540px;
   }
 }
@@ -170,6 +274,72 @@
   }
 }
 
+@media (max-width: 576px) {
+  .footer{
+    padding: 20px 0;
+    position: relative;
+    &__item-box{
+      &::before,
+      &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+      }
+      &::after{
+        top: auto;
+        bottom: 0;
+      }
+      svg{
+        display: block;
+      }
+    }
+    &__list-item{
+      position: relative;
+      padding: 5px 0;
+      &:not(:first-child){
+        &::before{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #fff;
+        }
+      }
+    }
+    &__item-box--active{
+      .footer__item-title{
+        color: #0049b0;
+        transition: ease 0.3s color;
+      }
+      svg{
+        transform: rotate(180deg);
+        fill: #0049b0;
+        transition: ease 0.3s transform, ease 0.3s fill;
+      }
+    }
+    &__item-title{
+      pointer-events: auto;
+      color: #000;
+    }
+    &__item-colapse{
+    }
+  }
+  .social{
+    .footer__item-title{
+      text-align: center;
+    }
+    .footer__social{
+      justify-content: center;
+    }
+  }
+}
+
 @include portrait-phones {
   .header{
     &__search-link{
@@ -177,6 +347,7 @@
     }
     &__form-btn{
       height: 55px;
+      pointer-events: auto;
     }
     .form-inline {
       position: absolute;
@@ -185,28 +356,35 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      justify-content: center;
       z-index: 5;
-      width: 95%;
+      width: 100%;
+      height: 100%;
       transition: ease 0.3s opacity, ease 0.3s visibility;
+      background: rgba(71, 67, 67, 0.705);
+      pointer-events: none;
     }
     .header__form--show{
       opacity: 1;
       visibility: visible;
     }
     .form-inline .form-control {
+      pointer-events: auto;
       height: 55px;
+      width: 95%;
     }
   }
-  .header__container, .container-sm, .container-md, .container-lg {
+  .container, .container-sm, .container-md, .container-lg {
     max-width: 420px;
     padding: 0 10px;
   }
 }
 
+
 @media (max-width: 340px) { 
-  .header__container, .container-sm, .container-md, .container-lg {
+  .container, .container-sm, .container-md, .container-lg {
     max-width: 320px;
-    padding: 0 28px;
+    padding: 0 10px;
   }
   .header{
     &__inner{

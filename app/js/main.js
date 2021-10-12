@@ -17,10 +17,22 @@ $(function () {
   })
 
   $(document).mouseup(function (e) {
-    if (!searchForm.is(e.target) 
-		  && searchForm.has(e.target).length === 0) { 
-        searchForm.removeClass('header__form--show');
-        body.removeClass('body-lock');
-		}
+    if (!searchForm.is(e.target) &&
+      searchForm.has(e.target).length === 0) {
+      searchForm.removeClass('header__form--show');
+      body.removeClass('body-lock');
+    }
   });
+
+  if ($(window).width() >= 577) {
+    $('.footer__item-colapse').addClass('show');
+  }
+
+  if ($(window).width() <= 576) {
+
+    $('.footer__item-title').on('click', function(){
+      $(this).parent().toggleClass('footer__item-box--active');
+    });
+  }
+
 });
