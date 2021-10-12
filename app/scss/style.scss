@@ -246,6 +246,76 @@
   }
 }
 
+.inputs{
+  padding: 40px 0;
+  &__label{
+    .inputs__checkbox:checked + .inputs__custom-checkbox{
+      background-image: url('../images/icons/multi/spriteMulti.svg#check');
+      background-size: 8px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-color: #31a5e7;
+    }
+    .inputs__radio:checked + .inputs__custom-radio{
+      border-color: #31a5e7;
+      &::before{
+        display: block;
+      }
+    }
+  }
+  &__box{
+    &:not(:last-child){
+      margin-right: 20px;
+    }
+  }
+  &__checkbox{
+    @extend %checkbox-hidden;
+  }
+  &__radio{
+    @extend %radio-hidden;
+  }
+  &__custom-radio{
+    transform: translateY(1px);
+    border-radius: 50%;
+    position: relative;
+    &::before{
+      content: '';
+      display: none;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #31a5e7;
+      top: 4px;
+      left: 4px;
+    }
+  }
+  &__custom-checkbox,
+  &__custom-radio{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #5a5a5a;
+  }
+  .form-check {
+    padding-left: 0;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before{
+    border-color: #34bf49;
+    background-color: #34bf49;
+  }
+
+  .custom-switch .custom-control-label::before{
+    border-color: #f49a9e;
+    background-color: #f49a9e;
+  }
+
+  .custom-switch .custom-control-label::after{
+    background-color: #fff;
+  }
+}
+
 @include min-laptop-l{
   .header{
     .navbar {
@@ -297,13 +367,9 @@
   .container, .container-sm, .container-md, .container-lg {
     max-width: 540px;
   }
-  .items{
+  .items,
+  .inputs{
     padding: 20px 0;
-  }
-  .items{
-    &__btn{
-
-    }
   }
 }
 
@@ -430,6 +496,15 @@
   .header{
     &__inner{
       padding: 14px 0;
+    }
+  }
+  .inputs{
+    &__box{
+      width: 100%;
+      &:not(:last-child){
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
     }
   }
 }

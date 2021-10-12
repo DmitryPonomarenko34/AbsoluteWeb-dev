@@ -4,6 +4,18 @@
   background-repeat: no-repeat;
 }
 
+%checkbox-hidden,
+%radio-hidden{
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 @mixin laptop-L {
   @media (max-width: 1200px) { @content; }
 }
