@@ -1,0 +1,216 @@
+@import 'vars';
+@import 'libs';
+@import 'global';
+@import 'components/header';
+@import 'components/footer';
+
+.header{
+  &__inner{
+    padding: 30px 0;
+  }
+  .logo{
+    img{
+      max-width: 100%;
+    }
+  }
+  &__search-link{
+    display: none;
+    svg{
+      width: 18px;
+      height: 18px;
+      fill: #0049b0;
+      pointer-events: none;
+    }
+  }
+  &__form-btn{
+    width: 77px;
+    height: 33px;
+    background-color: #0049b0;
+    margin-left: -77px;
+    svg{
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+  }
+  &__form-input{
+    padding-right: 85px;
+    border-radius: 0;
+    height: 35px;
+    min-width: 290px;
+    border-color: #a1a1a1;
+  }
+  .navbar{
+    padding: 0;
+  }
+  .nav-link{
+    padding: 20px 50px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #343a40;
+    &--current{
+      background-color: #dae0e5 !important;
+      color: #0049b0;
+    }
+    &:hover{
+      color: #0049b0;
+    }
+  }
+  .navbar-toggler{
+    position: relative;
+    padding: 0;
+    min-width: 22px;
+    height: 19px;
+    span{
+      height: 3px;
+      width: 100%;
+      background-color: #0049b0;
+      transition: ease 0.2s opacity, ease 0.2s transform;
+    }
+    &::before,
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 3px;
+      background-color: #0049b0;
+      transition: ease 0.3s transform;
+    }
+    &::before{
+      top: 0;
+      transition: ease 0.3s top;
+    }
+    &::after{
+      bottom: 0;
+      transition: ease 0.3s bottom;
+    }
+    &:not(.collapsed){
+      span {
+        opacity: 0;
+        transition: ease 0.2s opacity, ease 0.2s transform;
+        transform: translateX(-2px);
+      }
+      &::before{
+        top: auto;
+        transform: rotate(-45deg);
+        transition: ease 0.3s transform, ease 0.3s top;
+      }
+      &::after{
+        transform: rotate(45deg);
+        bottom: auto;
+        transition: ease 0.3s transform, ease 0.3s bottom;
+      }
+    }
+  }
+  .form-inline .form-control{
+    width: 100%;
+  }
+}
+
+@include min-laptop-l{
+  .header{
+    .navbar {
+      background-color: #f8f9fa;
+    }
+    .navbar-expand-xl .navbar-nav .nav-link{
+      padding: 20px 48px;
+    }
+    .navbar-toggler{
+      display: none;
+    }
+  }
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1140px;
+  }
+}
+
+@include laptop-L {
+  .header {
+    &__form-input{
+      min-width: 360px;
+    }
+    &__inner{
+      padding: 25px 0;
+    }
+    .logo{
+      img{
+        max-width: 80%;
+      }
+    }
+    .nav-item{
+      &:not(:last-child){
+        border-bottom: 6px solid #fff;
+      }
+    }
+    .nav-link{
+      padding: 10px 20px;
+    }
+  }
+  .navbar-nav{
+    padding: 0 16px;
+  }
+  .header__container, .container-sm, .container-md, .container-lg {
+    max-width: 780px;
+  }
+}
+
+@include tablet {
+  .header__container, .container-sm, .container-md, .container-lg {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 700px) { 
+  .header {
+    &__form-input{
+      min-width: auto;
+    }
+  }
+}
+
+@include portrait-phones {
+  .header{
+    &__search-link{
+      display: inline-block;
+    }
+    &__form-btn{
+      height: 55px;
+    }
+    .form-inline {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      width: 95%;
+      transition: ease 0.3s opacity, ease 0.3s visibility;
+    }
+    .header__form--show{
+      opacity: 1;
+      visibility: visible;
+    }
+    .form-inline .form-control {
+      height: 55px;
+    }
+  }
+  .header__container, .container-sm, .container-md, .container-lg {
+    max-width: 420px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 340px) { 
+  .header__container, .container-sm, .container-md, .container-lg {
+    max-width: 320px;
+    padding: 0 28px;
+  }
+  .header{
+    &__inner{
+      padding: 14px 0;
+    }
+  }
+}
