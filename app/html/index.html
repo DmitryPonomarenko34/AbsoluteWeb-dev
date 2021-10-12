@@ -13,10 +13,25 @@
   <div class="site-container">
     @@include('components/_header.html')
     <main class="main">
+      <div class="items">
+        <div class="container">
+          <h2 class="title text-center">
+            Buttons
+          </h2>
+          <div class="items__inner d-flex justify-content-md-center flex-wrap">
+            <button type="button" class="items__btn btn btn-primary">Primary</button>
+            <button type="button" class="items__btn btn btn-default">Default</button>
+            <button type="button" class="items__btn btn btn-success">Success</button>
+            <button type="button" class="items__btn btn btn-info">Info</button>
+            <button type="button" class="items__btn btn btn-warning">Warning</button>
+            <button type="button" class="items__btn btn btn-danger">Danger</button>
+          </div>
+        </div>
+      </div>
     </main>
     @@include('components/_footer.html')
   </div>
-  
+
   <script src="js/main.min.js"></script>
 </body>
 
