@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: -apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  overflow-x: hidden;
 }
 
 .main {
@@ -16,16 +17,13 @@ body {
 .site-container{
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
   width: 100%;
   min-height: 100%;
 }
 
 .title{
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   font-size: 36px;
 }
-.body-lock{
-  overflow: hidden;
-}
+
