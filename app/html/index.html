@@ -13,10 +13,212 @@
   <div class="site-container">
     @@include('components/_header.html')
     <main class="main">
+      <div class="items">
+        <div class="container">
+          <h2 class="title text-center">
+            Buttons
+          </h2>
+          <div class="items__inner d-flex justify-content-xl-center flex-wrap">
+            <button type="button" class="items__btn btn btn-primary">Primary</button>
+            <button type="button" class="items__btn btn btn-default">Default</button>
+            <button type="button" class="items__btn btn btn-success">Success</button>
+            <button type="button" class="items__btn btn btn-info">Info</button>
+            <button type="button" class="items__btn btn btn-warning">Warning</button>
+            <button type="button" class="items__btn btn btn-danger">Danger</button>
+          </div>
+        </div>
+      </div>
+      <div class="inputs">
+        <div class="container">
+          <h2 class="title text-center">
+            Inputs
+          </h2>
+          <div class="inputs__inner d-flex justify-content-xl-center flex-wrap">
+            <div class="inputs__box">
+              <label class="inputs__label form-check">
+                <input class="inputs__checkbox form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                <span class="inputs__custom-checkbox"></span>
+                Checkbox active
+              </label>
+              <label class="inputs__label form-check">
+                <input class="inputs__checkbox form-check-input" type="checkbox" value="" id="defaultCheck2">
+                <span class="inputs__custom-checkbox"></span>
+                Checkbox
+              </label>
+            </div>
+            <div class="inputs__box">
+              <label class="inputs__label form-check">
+                <input class="inputs__radio form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                  value="option1" checked>
+                <span class="inputs__custom-radio"></span>
+                Radio active
+              </label>
+              <label class="inputs__label form-check">
+                <input class="inputs__radio form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                  value="option1">
+                <span class="inputs__custom-radio"></span>
+                Radio
+              </label>
+            </div>
+            <div class="inputs__box">
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                <label class="custom-control-label" for="customSwitch1">Switcher ON</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                <label class="custom-control-label" for="customSwitch2">Switcher OFF</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stars">
+        <h2 class="stars__title title text-center ">
+          Star rating
+        </h2>
+        <div class="container">
+          <div class="rate__box">
+            <div class="rate" data-rateyo-rating='80%'></div>
+            <span>
+              Show rating
+            </span>
+          </div>
+          <div class="rating">
+            <input type="radio" name="rating" id="r1">
+            <label for="r1"></label>
+            <input type="radio" name="rating" id="r2">
+            <label for="r2"></label>
+            <input type="radio" name="rating" id="r3">
+            <label for="r3"></label>
+            <input type="radio" name="rating" id="r4">
+            <label for="r4"></label>
+            <input type="radio" name="rating" id="r5">
+            <label for="r5"></label>
+            <span>
+              Check rating
+            </span>
+          </div>
+        </div>
+      </div>
+      <section class="carousel">
+        <h2 class="carousel__title title text-center">
+          Carousel
+        </h2>
+        <div class="container">
+          <div class="carousel__btns"></div>
+          <div class="slider">
+            <div class="slider-for">
+              <div class="slider-for__item">
+                <picture>
+                  <source srcset="images/content/carousel/big-1.webp" type="image/webp">
+                  <img src="images/content/carousel/big-1.jpg" alt="chewbaka">
+                </picture>
+                <div class="slider-for__info">
+                  <p class="slider-for__text">
+                    When I started, I weighed over 425 pounds. What matters is that you take the steps and focus on
+                    making one good choice at a time.
+                  </p>
+                  <span class="slider-for__name">
+                    Chewbacca
+                  </span>
+                  <time class="slider__for-date" data-time="2017-07-15">
+                    July 17
+                  </time>
+                </div>
+              </div>
+              <div class="slider-for__item">
+                <picture>
+                  <source srcset="images/content/carousel/big-2.webp" type="image/webp">
+                  <img src="images/content/carousel/big-2.jpg" alt="chewbaka">
+                </picture>
+                <div class="slider-for__info">
+                  <blockquote class="slider-for__quote">
+                    May the force be with you
+                  </blockquote>
+                  <p class="slider-for__text">
+                    Said Darth Vader and went to watch the TV series
+                  </p>
+                  <span class="slider-for__name">
+                    Darth Vader
+                  </span>
+                  <time data-time="2017-07-15">
+                    July 17
+                  </time>
+                </div>
+              </div>
+              <div class="slider-for__item">
+                <picture>
+                  <source srcset="images/content/carousel/big-3.webp" type="image/webp">
+                  <img src="images/content/carousel/big-3.jpg" alt="chewbaka">
+                </picture>
+                <div class="slider-for__info">
+                  <p class="slider-for__text">
+                    one of the main characters of "Star Wars", the Grand Master of the Jedi Order, one of the
+                    strongest and wisest Jedi of his time. Received a seat on the Jedi Council about a hundred years
+                    after his birth, and the title of Grand Master at about 600 years old.
+                  </p>
+                  <span class="slider-for__name">
+                    Yoda
+                  </span>
+                  <time data-time="2017-07-15">
+                    July 17
+                  </time>
+                </div>
+              </div>
+              <div class="slider-for__item">
+                <picture>
+                  <source srcset="images/content/carousel/big-4.webp" type="image/webp">
+                  <img src="images/content/carousel/big-4.jpg" alt="chewbaka">
+                </picture>
+                <div class="slider-for__info">
+                  <p class="slider-for__text">
+                    an astromech droid and C-3PO counterpart in the Star Wars universe, created shortly before 32 BBY.
+                    R2-D2 was played by Kenny Baker in seven Star Wars films, and many of the episodes used a
+                    mechanical or computer simulated model.
+                  </p>
+                  <span class="slider-for__name">
+                    R2-D2
+                  </span>
+                  <time data-time="2017-07-15">
+                    July 17
+                  </time>
+                </div>
+              </div> 
+            </div>
+            <div class="slider-nav">
+              <div class="slider-nav__item">
+                <picture>
+                  <source srcset="images/content/carousel/thumb-1.webp" type="image/webp">
+                  <img src="images/content/carousel/thumb-1.jpg" alt="">
+                </picture>
+              </div>
+              <div class="slider-nav__item">
+                <picture>
+                  <source srcset="images/content/carousel/thumb-2.webp" type="image/webp">
+                  <img src="images/content/carousel/thumb-2.jpg" alt="">
+                </picture>
+              </div>
+              <div class="slider-nav__item">
+                <picture>
+                  <source srcset="images/content/carousel/thumb-3.webp" type="image/webp">
+                  <img src="images/content/carousel/thumb-3.jpg" alt="">
+                </picture>
+              </div>
+              <div class="slider-nav__item">
+                <picture>
+                  <source srcset="images/content/carousel/thumb-4.webp" type="image/webp">
+                  <img src="images/content/carousel/thumb-4.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     @@include('components/_footer.html')
   </div>
-  
+
   <script src="js/main.min.js"></script>
 </body>
 
