@@ -46,8 +46,9 @@ function styles() {
 function scripts() {
   return src([
       'node_modules/jquery/dist/jquery.js',
-      'node_modules/svgxuse/svgxuse.js',
       'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+      'node_modules/svgxuse/svgxuse.js',
+      'node_modules/rateyo/src/jquery.rateyo.js',
       'app/js/main.js'
     ])
     .pipe(babel({

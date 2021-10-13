@@ -1,3 +1,4 @@
+@import 'ic-fonts';
 @import 'vars';
 @import 'libs';
 @import 'global';
@@ -315,6 +316,98 @@
     background-color: #fff;
   }
 }
+
+.stars{
+  padding: 40px 0;
+}
+
+@mixin star-rating( $filled-color: #e7ab65, $empty-color: #e7ab65, $size: 14px,) {
+  $star--filled: '\e9d9';
+  $star--empty: '\e900';
+  > * {
+   float: right;
+  }
+  label {
+   height: 10px;
+   width: 1.4%;
+   display: block;
+   position: relative;
+   cursor: pointer;
+   @for $i from 5 through 1 {
+    &:nth-of-type(#{$i}):after {
+     $animation-delay: $i * .05s;
+     animation-delay: $animation-delay;
+    }
+   }
+   &:after {
+    transition: all 0.4s ease-out;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    content: '#{$star--empty}';
+    font-family: 'icomoon';
+    color: $empty-color;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: $size;
+    animation: 1s pulse ease;
+   }
+   &:hover ~ label:after{
+    content: '#{$star--filled}';
+    font-family: 'icomoon';
+    color: $filled-color;
+    text-shadow: 0 0 20px $filled-color;
+   }
+   &:hover::after{
+    content: '#{$star--filled}';
+    font-family: 'icomoon';
+    color: $filled-color;
+    text-shadow: 0 0 20px $filled-color;
+   }
+   &:not(:last-child){
+     padding-right: 5px;
+   }
+  }
+  input {
+   display: none;
+   &:checked {
+    + label:after,
+    ~ label:after {
+     content: '#{$star--filled}';
+     color: $filled-color;
+     text-shadow: 0 0 20px $filled-color;
+    }
+   }
+  }
+ }
+ 
+ .rating {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  @include star-rating();
+  span{
+    margin-left: 5px;
+    order: -1;
+  }
+ }
+ .rate{
+   &__box{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     span{
+      margin-left: 9px;
+    }
+   }
+ }
+
+ .jq-ry-container{
+  padding: 0;
+ }
+
 
 @include min-laptop-l{
   .header{
