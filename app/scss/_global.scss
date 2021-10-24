@@ -6,24 +6,23 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: -apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   overflow-x: hidden;
+  font-family: 'Roboto-Regular', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .main {
   flex: 1 0 auto;
 }
 
-.site-container{
+.site-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100%;
 }
 
-.title{
+.title {
   position: relative;
-  margin-bottom: 36px;
+  margin-bottom: 42px;
   font-size: 36px;
 }
-

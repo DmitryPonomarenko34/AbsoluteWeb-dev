@@ -31,6 +31,10 @@
     "jquery": "^3.5.1",
     "rateyo": "^2.3.2",
     "slick-carousel": "^1.8.1",
+    "stylelint": "^14.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.0.0",
     "svgxuse": "^1.2.6"
   },
   "dependencies": {}

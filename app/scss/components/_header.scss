@@ -1,0 +1,139 @@
+.header {
+  &__inner {
+    padding: 30px 0 27px;
+  }
+
+  .logo {
+    &__img {
+      max-width: 100%;
+    }
+  }
+
+  &__search-link {
+    display: none;
+  }
+
+  &__search-svg {
+    width: 18px;
+    height: 18px;
+    fill: #0049b0;
+    pointer-events: none;
+  }
+
+  &__form-btn {
+    margin-left: -78px;
+    width: 77px;
+    height: 33px;
+    background-color: #0049b0;
+    transition: ease 0.3s background-color;
+
+    &:hover {
+      background-color: #202020;
+      transition: ease 0.3s background-color;
+    }
+  }
+
+  &__form-svg {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+  }
+
+  &__form-input {
+    border-color: #a1a1a1;
+    border-radius: 0;
+    padding-right: 85px;
+    height: 35px;
+    min-width: 367px;
+
+    &::placeholder {
+      font-size: 15px;
+      color: #5e5d5c;
+      opacity: 1;
+
+      @extend %opensans-regular;
+    }
+  }
+
+  .navbar {
+    padding: 0;
+  }
+
+  .nav-link {
+    padding: 20px 50px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #202020;
+
+    &:hover {
+      color: #0049b0;
+    }
+
+    &--current {
+      color: #0049b0;
+      background-color: #dae0e5;
+    }
+
+    @extend %roboto-bold;
+  }
+
+  .navbar-toggler {
+    position: relative;
+    padding: 0;
+    height: 19px;
+    min-width: 22px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #0049b0;
+      transition: ease 0.3s transform;
+    }
+
+    &::before {
+      top: 0;
+      transition: ease 0.3s top;
+    }
+
+    &::after {
+      bottom: 0;
+      transition: ease 0.3s bottom;
+    }
+
+    &-icon {
+      width: 100%;
+      height: 3px;
+      background-color: #0049b0;
+      transition: ease 0.2s opacity, ease 0.2s transform;
+    }
+
+    &:not(.collapsed) {
+      &::before {
+        top: auto;
+        transform: rotate(-45deg);
+        transition: ease 0.3s transform, ease 0.3s top;
+      }
+
+      &::after {
+        bottom: auto;
+        transform: rotate(45deg);
+        transition: ease 0.3s transform, ease 0.3s bottom;
+      }
+
+      .navbar-toggler-icon {
+        opacity: 0;
+        transform: translateX(-2px);
+        transition: ease 0.2s opacity, ease 0.2s transform;
+      }
+    }
+  }
+
+  .form-inline .form-control {
+    width: 100%;
+  }
+}

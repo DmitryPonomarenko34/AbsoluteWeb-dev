@@ -12,26 +12,26 @@
 <body>
   <div class="site-container">
     <header class="header">
-  <div class="container">
+  <div class="container header__conatiner">
     <div class="header__inner d-flex justify-content-lg-between align-items-center">
-      <button class="navbar-toggler mr-3 d-flex d-xl-none justify-content-between align-items-center collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler d-flex d-xl-none justify-content-between align-items-center collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="logo mr-auto pr-3" href="#">
+      <a class="logo" href="#">
         <picture>
           <source srcset="images/logo.webp" type="image/webp">
-          <img src="images/logo.png" alt="logo">
+          <img class="logo__img" src="images/logo.png" alt="logo">
         </picture>
       </a>
       <a class="header__search-link" href="#">
-        <svg>
+        <svg class="header__search-svg">
           <use xlink:href="images/icons/mono/spriteMono.svg#search"></use>
         </svg>
       </a>
       <form class="header__form form-inline d-flex">
-        <input class="header__form-input border form-control" type="search" placeholder="Search" aria-label="Search">
+        <input class="header__form-input form-control" type="search" placeholder="Search" aria-label="Search">
         <button class="header__form-btn btn d-flex justify-content-center align-items-center" type="submit">
-          <svg>
+          <svg class="header__form-svg">
             <use xlink:href="images/icons/mono/spriteMono.svg#search"></use>
           </svg>
         </button>
@@ -71,7 +71,7 @@
     <main class="main">
       <div class="items">
         <div class="container">
-          <h2 class="title text-center">
+          <h2 class="items__title title text-center">
             Buttons
           </h2>
           <div class="items__inner d-flex justify-content-xl-center flex-wrap">
@@ -86,7 +86,7 @@
       </div>
       <div class="inputs">
         <div class="container">
-          <h2 class="title text-center">
+          <h2 class="inputs__title title text-center">
             Inputs
           </h2>
           <div class="inputs__inner d-flex justify-content-xl-center flex-wrap">
@@ -117,14 +117,14 @@
               </label>
             </div>
             <div class="inputs__box">
-              <div class="custom-control custom-switch">
+              <label class="inputs__label custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
                 <label class="custom-control-label" for="customSwitch1">Switcher ON</label>
-              </div>
-              <div class="custom-control custom-switch">
+              </label>
+              <label class="inputs__label custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitch2">
                 <label class="custom-control-label" for="customSwitch2">Switcher OFF</label>
-              </div>
+              </label>
             </div>
           </div>
         </div>
@@ -134,24 +134,24 @@
           Star rating
         </h2>
         <div class="container">
-          <div class="rate__box">
-            <div class="rate" data-rateyo-rating='80%'></div>
-            <span>
+          <div class="rate">
+            <div class="rate__item" data-rateyo-rating='80%'></div>
+            <span class="rate__text">
               Show rating
             </span>
           </div>
           <div class="rating">
-            <input type="radio" name="rating" id="r1">
-            <label for="r1"></label>
-            <input type="radio" name="rating" id="r2">
-            <label for="r2"></label>
-            <input type="radio" name="rating" id="r3">
-            <label for="r3"></label>
-            <input type="radio" name="rating" id="r4">
-            <label for="r4"></label>
-            <input type="radio" name="rating" id="r5">
-            <label for="r5"></label>
-            <span>
+            <input class="rating__input" type="radio" name="rating" id="r1">
+            <label class="rating__label" for="r1"></label>
+            <input class="rating__input" type="radio" name="rating" id="r2">
+            <label class="rating__label" for="r2"></label>
+            <input class="rating__input" type="radio" name="rating" id="r3">
+            <label class="rating__label" for="r3"></label>
+            <input class="rating__input" type="radio" name="rating" id="r4">
+            <label class="rating__label" for="r4"></label>
+            <input class="rating__input" type="radio" name="rating" id="r5">
+            <label class="rating__label" for="r5"></label>
+            <span class="rating__text">
               Check rating
             </span>
           </div>
@@ -166,105 +166,113 @@
           <div class="slider">
             <div class="slider-for">
               <div class="slider-for__item">
-                <picture>
-                  <source srcset="images/content/carousel/big-1.webp" type="image/webp">
-                  <img src="images/content/carousel/big-1.jpg" alt="chewbaka">
-                </picture>
-                <div class="slider-for__info">
-                  <p class="slider-for__text">
-                    When I started, I weighed over 425 pounds. What matters is that you take the steps and focus on
-                    making one good choice at a time.
-                  </p>
-                  <span class="slider-for__name">
-                    Chewbacca
-                  </span>
-                  <time class="slider__for-date" data-time="2017-07-15">
-                    July 17
-                  </time>
+                <div class="slider-for__content">
+                  <picture>
+                    <source srcset="images/content/carousel/big-1.webp" type="image/webp">
+                    <img class="slider-for__img" src="images/content/carousel/big-1.jpg" alt="chewbaka">
+                  </picture>
+                  <div class="slider-for__info">
+                    <p class="slider-for__text">
+                      When I started, I weighed over 425 pounds. What matters is that you take the steps and focus on
+                      making one good choice at a time.
+                    </p>
+                    <span class="slider-for__name">
+                      Chewbacca
+                    </span>
+                    <time class="slider-for__date" data-time="2017-07-15">
+                      July 2017
+                    </time>
+                  </div>
                 </div>
               </div>
               <div class="slider-for__item">
-                <picture>
-                  <source srcset="images/content/carousel/big-2.webp" type="image/webp">
-                  <img src="images/content/carousel/big-2.jpg" alt="chewbaka">
-                </picture>
-                <div class="slider-for__info">
-                  <blockquote class="slider-for__quote">
-                    May the force be with you
-                  </blockquote>
-                  <p class="slider-for__text">
-                    Said Darth Vader and went to watch the TV series
-                  </p>
-                  <span class="slider-for__name">
-                    Darth Vader
-                  </span>
-                  <time data-time="2017-07-15">
-                    July 17
-                  </time>
+                <div class="slider-for__content">
+                  <picture>
+                    <source srcset="images/content/carousel/big-2.webp" type="image/webp">
+                    <img class="slider-for__img" src="images/content/carousel/big-2.jpg" alt="chewbaka">
+                  </picture>
+                  <div class="slider-for__info">
+                    <blockquote class="slider-for__quote">
+                      May the force be with you
+                    </blockquote>
+                    <p class="slider-for__text">
+                      Said Darth Vader and went to watch the TV series
+                    </p>
+                    <span class="slider-for__name">
+                      Darth Vader
+                    </span>
+                    <time class="slider-for__date" data-time="2017-07-15">
+                      July 2017
+                    </time>
+                  </div>
                 </div>
               </div>
               <div class="slider-for__item">
-                <picture>
-                  <source srcset="images/content/carousel/big-3.webp" type="image/webp">
-                  <img src="images/content/carousel/big-3.jpg" alt="chewbaka">
-                </picture>
-                <div class="slider-for__info">
-                  <p class="slider-for__text">
-                    one of the main characters of "Star Wars", the Grand Master of the Jedi Order, one of the
-                    strongest and wisest Jedi of his time. Received a seat on the Jedi Council about a hundred years
-                    after his birth, and the title of Grand Master at about 600 years old.
-                  </p>
-                  <span class="slider-for__name">
-                    Yoda
-                  </span>
-                  <time data-time="2017-07-15">
-                    July 17
-                  </time>
+                <div class="slider-for__content">
+                  <picture>
+                    <source srcset="images/content/carousel/big-3.webp" type="image/webp">
+                    <img class="slider-for__img" src="images/content/carousel/big-3.jpg" alt="chewbaka">
+                  </picture>
+                  <div class="slider-for__info">
+                    <p class="slider-for__text">
+                      one of the main characters of "Star Wars", the Grand Master of the Jedi Order, one of the
+                      strongest and wisest Jedi of his time. Received a seat on the Jedi Council about a hundred years
+                      after his birth, and the title of Grand Master at about 600 years old.
+                    </p>
+                    <span class="slider-for__name">
+                      Yoda
+                    </span>
+                    <time class="slider-for__date" data-time="2017-07-15">
+                      July 2017
+                    </time>
+                  </div>
                 </div>
               </div>
               <div class="slider-for__item">
-                <picture>
-                  <source srcset="images/content/carousel/big-4.webp" type="image/webp">
-                  <img src="images/content/carousel/big-4.jpg" alt="chewbaka">
-                </picture>
-                <div class="slider-for__info">
-                  <p class="slider-for__text">
-                    an astromech droid and C-3PO counterpart in the Star Wars universe, created shortly before 32 BBY.
-                    R2-D2 was played by Kenny Baker in seven Star Wars films, and many of the episodes used a
-                    mechanical or computer simulated model.
-                  </p>
-                  <span class="slider-for__name">
-                    R2-D2
-                  </span>
-                  <time data-time="2017-07-15">
-                    July 17
-                  </time>
+                <div class="slider-for__content">
+                  <picture>
+                    <source srcset="images/content/carousel/big-4.webp" type="image/webp">
+                    <img class="slider-for__img" src="images/content/carousel/big-4.jpg" alt="chewbaka">
+                  </picture>
+                  <div class="slider-for__info">
+                    <p class="slider-for__text">
+                      an astromech droid and C-3PO counterpart in the Star Wars universe, created shortly before 32 BBY.
+                      R2-D2 was played by Kenny Baker in seven Star Wars films, and many of the episodes used a
+                      mechanical or computer simulated model.
+                    </p>
+                    <span class="slider-for__name">
+                      R2-D2
+                    </span>
+                    <time class="slider-for__date" data-time="2017-07-15">
+                      July 17
+                    </time>
+                  </div>
                 </div>
-              </div> 
+              </div>
             </div>
             <div class="slider-nav">
               <div class="slider-nav__item">
                 <picture>
                   <source srcset="images/content/carousel/thumb-1.webp" type="image/webp">
-                  <img src="images/content/carousel/thumb-1.jpg" alt="">
+                  <img class="slider-nav__img" src="images/content/carousel/thumb-1.jpg" alt="">
                 </picture>
               </div>
               <div class="slider-nav__item">
                 <picture>
                   <source srcset="images/content/carousel/thumb-2.webp" type="image/webp">
-                  <img src="images/content/carousel/thumb-2.jpg" alt="">
+                  <img class="slider-nav__img" src="images/content/carousel/thumb-2.jpg" alt="">
                 </picture>
               </div>
               <div class="slider-nav__item">
                 <picture>
                   <source srcset="images/content/carousel/thumb-3.webp" type="image/webp">
-                  <img src="images/content/carousel/thumb-3.jpg" alt="">
+                  <img class="slider-nav__img" src="images/content/carousel/thumb-3.jpg" alt="">
                 </picture>
               </div>
               <div class="slider-nav__item">
                 <picture>
                   <source srcset="images/content/carousel/thumb-4.webp" type="image/webp">
-                  <img src="images/content/carousel/thumb-4.jpg" alt="">
+                  <img class="slider-nav__img" src="images/content/carousel/thumb-4.jpg" alt="">
                 </picture>
               </div>
             </div>
@@ -281,29 +289,29 @@
         </h6>
         <ul class="footer__social">
           <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--facebook" href="#">
-              <svg>
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-svg footer__social-svg--facebook">
                 <use xlink:href="images/icons/mono/spriteMono.svg#facebook"></use>
               </svg>
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--twitter" href="#">
-              <svg>
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-svg footer__social-svg--twitter">
                 <use xlink:href="images/icons/mono/spriteMono.svg#twitter"></use>
               </svg>
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--instagram" href="#">
-              <svg>
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-svg footer__social-svg--instagram">
                 <use xlink:href="images/icons/mono/spriteMono.svg#instagram"></use>
               </svg>
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--pinterest" href="#">
-              <svg>
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-svg footer__social-svg--pinterest">
                 <use xlink:href="images/icons/mono/spriteMono.svg#pinterest"></use>
               </svg>
             </a>
@@ -316,7 +324,7 @@
             aria-controls="collapseOne">
             Shop
           </h6>
-          <svg>
+          <svg class="footer__item-svg">
             <use xlink:href="images/icons/mono/spriteMono.svg#angle-down"></use>
           </svg>
         </div>
@@ -356,7 +364,7 @@
             aria-expanded="false" aria-controls="collapseTwo">
             About
           </h6>
-          <svg>
+          <svg class="footer__item-svg">
             <use xlink:href="images/icons/mono/spriteMono.svg#angle-down"></use>
           </svg>
         </div>
@@ -391,16 +399,16 @@
         </div>
       </div>
       <div class="footer__item col-12 col-sm" id="headingThree">
-        <div class="footer__item-box">
+        <div class="footer__item-box footer__item-box--active">
           <h6 class="footer__item-title collapsed" data-toggle="collapse" data-target="#collapseThree"
             aria-expanded="false" aria-controls="collapseThree">
             More
           </h6>
-          <svg>
+          <svg class="footer__item-svg">
             <use xlink:href="images/icons/mono/spriteMono.svg#angle-down"></use>
           </svg>
         </div>
-        <div id="collapseThree" class="footer__item-colapse collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div id="collapseThree" class="footer__item-colapse collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
           <ul class="footer__list card-body">
             <li class="footer__list-item">
               <a class="footer__list-link" href="#">

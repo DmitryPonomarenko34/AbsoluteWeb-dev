@@ -1,0 +1,65 @@
+@font-face {
+  src:
+    local("Roboto-Bold"),
+    url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src:
+    local("Roboto-Regular"),
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-family: "Roboto-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src:
+    local("Montserrat-Regular"),
+    url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-family: "Montserrat-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src:
+    local("OpenSans-Regular"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-family: "OpenSans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src:
+    local("MyriadPro-Regular"),
+    url("../fonts/MyriadPro-Regular.woff2") format("woff2"),
+    url("../fonts/MyriadPro-Regular.woff") format("woff");
+  font-family: "MyriadPro-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src:
+    local("MyriadPro-Bold"),
+    url("../fonts/MyriadPro-Bold.woff2") format("woff2"),
+    url("../fonts/MyriadPro-Bold.woff") format("woff");
+  font-family: "MyriadPro-Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

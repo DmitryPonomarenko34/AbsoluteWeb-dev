@@ -1,24 +1,24 @@
 <header class="header">
-  <div class="container">
+  <div class="container header__conatiner">
     <div class="header__inner d-flex justify-content-lg-between align-items-center">
-      <button class="navbar-toggler mr-3 d-flex d-xl-none justify-content-between align-items-center collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler d-flex d-xl-none justify-content-between align-items-center collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="logo mr-auto pr-3" href="#">
+      <a class="logo" href="#">
         <picture>
           <source srcset="images/logo.webp" type="image/webp">
-          <img src="images/logo.png" alt="logo">
+          <img class="logo__img" src="images/logo.png" alt="logo">
         </picture>
       </a>
       <a class="header__search-link" href="#">
-        <svg>
+        <svg class="header__search-svg">
           <use xlink:href="images/icons/mono/spriteMono.svg#search"></use>
         </svg>
       </a>
       <form class="header__form form-inline d-flex">
-        <input class="header__form-input border form-control" type="search" placeholder="Search" aria-label="Search">
+        <input class="header__form-input form-control" type="search" placeholder="Search" aria-label="Search">
         <button class="header__form-btn btn d-flex justify-content-center align-items-center" type="submit">
-          <svg>
+          <svg class="header__form-svg">
             <use xlink:href="images/icons/mono/spriteMono.svg#search"></use>
           </svg>
         </button>
